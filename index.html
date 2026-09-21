@@ -29,7 +29,8 @@
       --radius-md: 20px;
       --radius-sm: 14px;
       --shadow: 0 18px 50px rgba(43, 51, 30, .09);
-      --shell: 1080px;
+      --shell: 1180px;
+      --hero-inner: 1240px;
     }
 
     * { box-sizing: border-box; }
@@ -76,14 +77,15 @@
       margin: 0 auto;
     }
 
-    .hero-wrap { padding: 18px 0 0; }
+    .hero-wrap { width: 100%; }
     .hero {
       position: relative;
       overflow: hidden;
-      border-radius: 34px;
+      width: 100%;
+      border-radius: 0 0 42px 42px;
       background: var(--forest);
       color: #fbf6ea;
-      box-shadow: 0 24px 70px rgba(39, 48, 26, .16);
+      box-shadow: 0 18px 54px rgba(39, 48, 26, .14);
       isolation: isolate;
     }
     .hero::before,
@@ -116,7 +118,9 @@
       align-items: center;
       justify-content: space-between;
       gap: 18px;
-      padding: 18px 22px 0;
+      width: min(calc(100% - 48px), var(--hero-inner));
+      margin: 0 auto;
+      padding: 22px 0 0;
     }
     .place {
       display: inline-flex;
@@ -169,13 +173,16 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(250px, .8fr) minmax(0, 1.2fr);
+      grid-template-columns: minmax(300px, .86fr) minmax(0, 1.14fr);
       align-items: center;
-      gap: clamp(30px, 6vw, 72px);
-      padding: clamp(34px, 6vw, 70px) clamp(24px, 6vw, 70px) clamp(42px, 7vw, 76px);
+      gap: clamp(44px, 7vw, 92px);
+      width: min(calc(100% - 48px), var(--hero-inner));
+      min-height: min(760px, calc(100svh - 22px));
+      margin: 0 auto;
+      padding: clamp(44px, 6vw, 76px) 0 clamp(58px, 7vw, 92px);
     }
     .logo-frame {
-      width: min(100%, 340px);
+      width: min(100%, 390px);
       justify-self: center;
       padding: 12px;
       border: 1px solid rgba(255,255,255,.13);
@@ -200,7 +207,7 @@
       margin: 0;
       max-width: 660px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.2rem, 5.4vw, 4.5rem);
+      font-size: clamp(2.6rem, 5.3vw, 5rem);
       line-height: .99;
       letter-spacing: -.035em;
       font-weight: 600;
@@ -249,7 +256,7 @@
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 8px;
-      margin: 14px auto 0;
+      margin: 18px auto 0;
       padding: 8px;
       border: 1px solid rgba(69,78,51,.10);
       border-radius: 18px;
@@ -511,16 +518,20 @@
 
     @media (max-width: 780px) {
       .shell { width: min(calc(100% - 24px), var(--shell)); }
-      .hero-wrap { padding-top: 12px; }
-      .hero { border-radius: 26px; }
-      .hero-top { padding: 14px 16px 0; }
+      .hero { border-radius: 0 0 28px 28px; }
+      .hero-top {
+        width: min(calc(100% - 28px), var(--hero-inner));
+        padding-top: max(14px, env(safe-area-inset-top));
+      }
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
-        padding: 30px 20px 38px;
+        gap: 30px;
+        width: min(calc(100% - 28px), var(--hero-inner));
+        min-height: auto;
+        padding: 30px 0 44px;
         text-align: center;
       }
-      .logo-frame { width: min(260px, 78vw); order: 0; }
+      .logo-frame { width: min(280px, 76vw); order: 0; }
       .hero-copy { order: 1; }
       .hero h1 { margin-inline: auto; font-size: clamp(2.1rem, 11vw, 3.25rem); }
       .hero-intro { margin-inline: auto; }
@@ -543,7 +554,10 @@
       .hero-top { align-items: center; }
       .place { font-size: .7rem; }
       .lang-switch button { min-width: 38px; min-height: 32px; padding-inline: 10px; }
-      .hero-grid { padding: 26px 16px 34px; }
+      .hero-grid {
+        width: min(calc(100% - 24px), var(--hero-inner));
+        padding: 24px 0 38px;
+      }
       .hero-intro { font-size: .98rem; }
       .hero-actions { display: grid; grid-template-columns: 1fr; }
       .cta { width: 100%; }
@@ -571,7 +585,7 @@
   <a class="skip-link" href="#main" data-tr>İçeriğe geç</a>
   <a class="skip-link" href="#main" data-ku>Biçe naverokê</a>
 
-  <div class="hero-wrap shell">
+  <div class="hero-wrap">
     <header class="hero">
       <div class="hero-top">
         <span class="place">İstanbul · Fatih</span>
@@ -614,7 +628,7 @@
       </div>
     </header>
 
-    <nav class="jumpbar" aria-label="Sayfa bölümleri">
+    <nav class="jumpbar shell" aria-label="Sayfa bölümleri">
       <a href="#about"><span data-tr>Biz Kimiz?</span><span data-ku>Em Kî Ne?</span></a>
       <a href="#activities"><span data-tr>Neler Yapıyoruz?</span><span data-ku>Em Çi Dikin?</span></a>
       <a href="#join"><span data-tr>Katılım</span><span data-ku>Tevlîbûn</span></a>
