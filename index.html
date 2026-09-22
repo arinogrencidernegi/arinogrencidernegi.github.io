@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Arîn Kültür Sanat Öğrenci Derneği</title>
+  <meta name="description" content="Arîn Kültür Sanat Öğrenci Derneği — İstanbul'da öğrencilerin kültür, sanat, dayanışma ve ortak üretim alanı.">
+  <meta name="theme-color" content="#394426">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arîn Kültür Sanat Öğrenci Derneği">
+  <meta property="og:description" content="Birlikte öğreniyor, üretiyor ve üniversite yaşamını birlikte kuruyoruz.">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="Arîn Kültür Sanat Öğrenci Derneği">
+  <meta property="og:image" content="logo-512.png">
+  <meta property="og:image:alt" content="Arîn Kültür Sanat Öğrenci Derneği logosu">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arîn Kültür Sanat Öğrenci Derneği">
+  <meta name="twitter:description" content="Birlikte öğreniyor, üretiyor ve üniversite yaşamını birlikte kuruyoruz.">
+  <meta name="twitter:image" content="logo-512.png">
+  <link rel="icon" href="logo-512.png" type="image/png">
+  <script>
+    (function () {
+      var root = document.documentElement;
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        root.classList.add('anim-ready');
+      }
+      var saved = null;
+      try { saved = localStorage.getItem('arin-theme'); } catch (_) {}
+      var theme = (saved === 'dark' || saved === 'light')
+        ? saved
+        : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      root.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,500..700&display=swap">
+
+  <style>
+    :root {
+      --forest: #394426;
+      --forest-2: #4c5933;
+      --forest-3: #65734a;
+      --paper: #f4f0e7;
+      --paper-2: #faf7f0;
+      --surface: #fffdf8;
+      --ink: #24291f;
+      --muted: #676b5d;
+      --line: #ded7c7;
+      --clay: #b96f3d;
+      --clay-soft: #f1dfd1;
+      --heading: var(--forest);
+      --body-text: #3d4336;
+      --clay-ink: #8d4d25;
+      --join-bg: #e9dfcf;
+      --join-border: #d8cbb6;
+      --join-text: #4e5347;
+      --surface-glass: rgba(255,253,248,.78);
+      --surface-glass-2: rgba(255,253,248,.84);
+      --watermark: rgba(57,68,38,.055);
+      --dash: #cfc3ae;
+      --hover-border: #cfc4ae;
+      --hover-border-2: #cabda6;
+      --font-display: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --radius-sm: 14px;
+      --shadow: 0 18px 50px rgba(43, 51, 30, .09);
+      --shadow-soft: 0 12px 36px rgba(55,63,40,.055);
+      --shadow-card: 0 10px 30px rgba(54,62,39,.05);
+      --shadow-lift: 0 15px 34px rgba(52,61,37,.07);
+      --glow-c: rgba(185,111,61,.07);
+      --hero-shadow: 0 18px 54px rgba(39,48,26,.14);
+      --shell: 1180px;
+      --hero-inner: 1240px;
+    }
+
+    :root[data-theme="dark"] {
+      --forest: #394426;
+      --paper: #171a14;
+      --paper-2: #1c2018;
+      --surface: #23271e;
+      --ink: #ece8dc;
+      --muted: #a6aa99;
+      --line: #3a4033;
+      --clay: #d4976a;
+      --clay-soft: #453226;
+      --heading: #d9dcc8;
+      --body-text: #c9c6b8;
+      --clay-ink: #e8b08a;
+      --join-bg: #2a2e24;
+      --join-border: #3d4335;
+      --join-text: #c5c1b2;
+      --surface-glass: rgba(35,39,30,.78);
+      --surface-glass-2: rgba(35,39,30,.84);
+      --watermark: rgba(236,232,220,.05);
+      --dash: #4a5040;
+      --hover-border: #4d5343;
+      --hover-border-2: #525848;
+      --shadow: 0 18px 50px rgba(0, 0, 0, .35);
+      --shadow-soft: 0 12px 36px rgba(0,0,0,.32);
+      --shadow-card: 0 10px 30px rgba(0,0,0,.28);
+      --shadow-lift: 0 15px 34px rgba(0,0,0,.35);
+      --glow-c: rgba(212,151,106,.06);
+      --hero-shadow: 0 18px 54px rgba(0,0,0,.5);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 8%, var(--glow-c), transparent 26rem),
+        var(--paper);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    ::selection { background: var(--clay-soft); color: var(--ink); }
+
+    [data-ku] { display: none !important; }
+    html[lang="ku"] [data-tr] { display: none !important; }
+    html[lang="ku"] [data-ku] { display: revert !important; }
+
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 999;
+      transform: translateY(-140%);
+      background: var(--surface);
+      color: var(--heading);
+      padding: 10px 14px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .shell {
+      width: min(calc(100% - 32px), var(--shell));
+      margin: 0 auto;
+    }
+
+    .hero-wrap { width: 100%; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      border-radius: 0 0 42px 42px;
+      background: var(--forest);
+      color: #fbf6ea;
+      box-shadow: var(--hero-shadow);
+      isolation: isolate;
+    }
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .hero::before {
+      width: 460px;
+      height: 460px;
+      right: -180px;
+      top: -240px;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 0 0 70px rgba(255,255,255,.025), 0 0 0 140px rgba(255,255,255,.018);
+    }
+    .hero::after {
+      width: 250px;
+      height: 250px;
+      left: -145px;
+      bottom: -150px;
+      background: rgba(185,111,61,.16);
+      filter: blur(2px);
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      width: min(calc(100% - 48px), var(--hero-inner));
+      margin: 0 auto;
+      padding: 22px 0 0;
+    }
+    .place {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .8rem;
+      font-weight: 760;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.78);
+    }
+    .place::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #d29a71;
+      box-shadow: 0 0 0 4px rgba(210,154,113,.15);
+    }
+
+    .hero-tools {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 4px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(8px);
+    }
+    .lang-switch button {
+      min-width: 42px;
+      min-height: 34px;
+      border: 0;
+      border-radius: 999px;
+      padding: 0 12px;
+      background: transparent;
+      color: #fff;
+      font: inherit;
+      font-size: .78rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background .18s ease, color .18s ease, transform .18s ease;
+    }
+    .lang-switch button.active {
+      background: #fbf6ea;
+      color: var(--forest);
+    }
+    .lang-switch button:active { transform: scale(.97); }
+
+    .theme-toggle {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: background .18s ease, transform .18s ease;
+    }
+    .theme-toggle:hover { background: rgba(255,255,255,.14); }
+    .theme-toggle:active { transform: scale(.94); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+    .theme-toggle .icon-moon { display: none; }
+    :root[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+    :root[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(300px, .86fr) minmax(0, 1.14fr);
+      align-items: center;
+      gap: clamp(44px, 7vw, 92px);
+      width: min(calc(100% - 48px), var(--hero-inner));
+      min-height: min(760px, calc(100svh - 22px));
+      margin: 0 auto;
+      padding: clamp(44px, 6vw, 76px) 0 clamp(58px, 7vw, 92px);
+    }
+    .logo-frame {
+      width: min(100%, 390px);
+      justify-self: center;
+      padding: 12px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 24px;
+      background: rgba(31,38,21,.22);
+      box-shadow: inset 0 1px rgba(255,255,255,.05);
+    }
+    .logo-frame img {
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #d6a27b;
+      font-size: .76rem;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      margin: 0;
+      max-width: 660px;
+      font-family: var(--font-display);
+      font-optical-sizing: auto;
+      font-size: clamp(2.6rem, 5.3vw, 5rem);
+      line-height: .99;
+      letter-spacing: -.03em;
+      font-weight: 600;
+      text-wrap: balance;
+    }
+    .hero-intro {
+      max-width: 650px;
+      margin: 20px 0 0;
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      line-height: 1.72;
+      color: rgba(255,255,255,.84);
+      text-wrap: pretty;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 50px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: .92rem;
+      font-weight: 800;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .cta:hover { transform: translateY(-2px); }
+    .cta.primary {
+      background: #fbf6ea;
+      color: var(--forest);
+      box-shadow: 0 10px 28px rgba(0,0,0,.12);
+    }
+    .cta.secondary {
+      border-color: rgba(255,255,255,.22);
+      background: rgba(255,255,255,.08);
+      color: #fff;
+    }
+    .cta svg { width: 18px; height: 18px; flex: 0 0 auto; }
+
+    .jumpbar {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin: 18px auto 0;
+      padding: 8px;
+      border: 1px solid rgba(69,78,51,.10);
+      border-radius: 18px;
+      background: var(--surface-glass-2);
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(12px);
+    }
+    .jumpbar a {
+      min-width: 0;
+      padding: 10px 8px;
+      border-radius: 12px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 760;
+      transition: background .16s ease, color .16s ease;
+    }
+    .jumpbar a:hover { background: var(--paper); color: var(--heading); }
+
+    main { padding: 54px 0 30px; }
+    .section { scroll-margin-top: 22px; margin-top: 66px; }
+    .section:first-child { margin-top: 0; }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, .75fr);
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+    .section-kicker {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 8px;
+      color: var(--clay);
+      font-size: .75rem;
+      font-weight: 850;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    .section-kicker::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+    }
+    .section h2 {
+      margin: 0;
+      font-family: var(--font-display);
+      font-optical-sizing: auto;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      line-height: 1.07;
+      letter-spacing: -.022em;
+      color: var(--heading);
+      font-weight: 600;
+      text-wrap: balance;
+    }
+    .section-lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: .98rem;
+      text-wrap: pretty;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 16px;
+    }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-soft);
+    }
+    .about-copy { padding: clamp(24px, 5vw, 42px); }
+    .about-copy p {
+      margin: 0;
+      max-width: 720px;
+      color: var(--body-text);
+      font-size: clamp(1rem, 2vw, 1.08rem);
+      text-wrap: pretty;
+    }
+    .about-copy p + p { margin-top: 14px; }
+    .values {
+      display: grid;
+      gap: 1px;
+      overflow: hidden;
+      background: var(--line);
+    }
+    .value {
+      position: relative;
+      padding: 22px 22px 22px 66px;
+      background: var(--surface);
+    }
+    .value .num {
+      position: absolute;
+      left: 22px;
+      top: 22px;
+      color: var(--clay);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .value strong { display: block; color: var(--heading); font-size: .98rem; }
+    .value span { display: block; margin-top: 3px; color: var(--muted); font-size: .86rem; }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .activity {
+      min-width: 0;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface-glass);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    .activity:hover {
+      transform: translateY(-3px);
+      border-color: var(--hover-border);
+      box-shadow: var(--shadow-lift);
+    }
+    .activity-icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      background: var(--clay-soft);
+      color: var(--clay-ink);
+    }
+    .activity-icon svg { width: 21px; height: 21px; }
+    .activity h3 { margin: 0; color: var(--heading); font-size: 1.04rem; }
+    .activity p { margin: 8px 0 0; color: var(--muted); font-size: .91rem; }
+
+    .join-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
+      gap: 28px;
+      padding: clamp(28px, 6vw, 58px);
+      border-radius: 30px;
+      background: var(--join-bg);
+      border: 1px solid var(--join-border);
+    }
+    .join-card::after {
+      content: "ARÎN";
+      position: absolute;
+      right: -18px;
+      bottom: -34px;
+      font-family: var(--font-display);
+      font-size: clamp(6rem, 18vw, 12rem);
+      line-height: 1;
+      letter-spacing: -.08em;
+      color: var(--watermark);
+      pointer-events: none;
+    }
+    .join-card h2 { max-width: 690px; }
+    .join-copy {
+      position: relative;
+      z-index: 1;
+      margin: 16px 0 0;
+      max-width: 690px;
+      color: var(--join-text);
+      text-wrap: pretty;
+    }
+    .join-actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+    .join-actions .cta { width: 100%; }
+    .join-actions .primary { background: var(--forest); color: #fff; }
+    .join-actions .secondary { border-color: var(--join-border); background: var(--surface-glass); color: var(--heading); }
+
+    .faq-list {
+      display: grid;
+      gap: 10px;
+    }
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 18px 20px;
+      cursor: pointer;
+      font-weight: 760;
+      color: var(--heading);
+      list-style: none;
+      transition: background .16s ease;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary:focus-visible { outline-offset: -3px; }
+    .faq-item summary:hover { background: var(--paper-2); }
+    .faq-item summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--clay);
+      transition: transform .2s ease;
+    }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p {
+      margin: 0;
+      padding: 0 20px 18px;
+      color: var(--muted);
+      font-size: .93rem;
+      text-wrap: pretty;
+    }
+    html.anim-ready .faq-list .faq-item:nth-child(2).is-visible { animation-delay: .07s; }
+    html.anim-ready .faq-list .faq-item:nth-child(3).is-visible { animation-delay: .14s; }
+    html.anim-ready .faq-list .faq-item:nth-child(4).is-visible { animation-delay: .21s; }
+
+    .flow-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .flow-step {
+      position: relative;
+      min-width: 0;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: var(--shadow-card);
+    }
+    .flow-step .num {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--clay);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .flow-step h3 { margin: 0; color: var(--heading); font-size: 1.04rem; }
+    .flow-step p { margin: 8px 0 0; color: var(--muted); font-size: .91rem; text-wrap: pretty; }
+    .flow-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -16px;
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+      padding: 2px 0;
+      color: var(--clay);
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      background: var(--paper);
+      pointer-events: none;
+    }
+    html.anim-ready .flow-strip .flow-step:nth-child(2).is-visible { animation-delay: .07s; }
+    html.anim-ready .flow-strip .flow-step:nth-child(3).is-visible { animation-delay: .14s; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .contact-card {
+      min-width: 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      min-height: 126px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      text-decoration: none;
+      box-shadow: var(--shadow-card);
+      transition: transform .18s ease, border-color .18s ease;
+    }
+    .contact-card:hover { transform: translateY(-2px); border-color: var(--hover-border-2); }
+    .contact-card .icon {
+      display: grid;
+      place-items: center;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--forest);
+      color: #fff;
+    }
+    .contact-card.instagram .icon { background: var(--clay); }
+    .contact-card svg { width: 20px; height: 20px; }
+    .contact-card strong { display: block; margin-top: 1px; color: var(--heading); font-size: .95rem; }
+    .contact-card small {
+      display: block;
+      overflow-wrap: anywhere;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .8rem;
+      line-height: 1.45;
+    }
+
+    .social-note {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 14px;
+      padding: 17px 20px;
+      border-radius: 16px;
+      border: 1px dashed var(--dash);
+      color: var(--muted);
+      font-size: .88rem;
+    }
+    .social-note a {
+      flex: 0 0 auto;
+      color: var(--heading);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    footer { padding: 28px 0 max(30px, env(safe-area-inset-bottom)); }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(87,94,70,.16);
+      color: var(--muted);
+      font-size: .79rem;
+    }
+    .footer-brand { color: var(--heading); font-weight: 800; }
+
+    :focus-visible {
+      outline: 3px solid rgba(185,111,61,.55);
+      outline-offset: 3px;
+    }
+
+    @media (pointer: coarse) {
+      .lang-switch button,
+      .theme-toggle,
+      .jumpbar a { min-height: 44px; }
+      .faq-item summary { min-height: 44px; }
+    }
+
+    @media print {
+      html.anim-ready [data-reveal],
+      html.anim-ready .logo-frame,
+      html.anim-ready .hero-copy {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+      }
+      body { background: #fff; }
+      .skip-link,
+      .hero-tools,
+      .jumpbar,
+      .hero-actions,
+      .join-actions { display: none !important; }
+      .hero {
+        background: #fff;
+        color: var(--ink);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        box-shadow: none;
+      }
+      .hero::before, .hero::after { display: none; }
+      .place, .eyebrow, .hero-intro { color: #444 !important; }
+      .panel, .activity, .faq-item, .contact-card, .join-card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+      .join-card { background: #fff; border: 1px solid var(--line); }
+      .section-head { break-after: avoid; }
+      .faq-item p { color: #333; }
+      a[href^="http"]::after,
+      a[href^="mailto:"]::after {
+        content: " (" attr(href) ")";
+        font-size: .78em;
+        font-weight: 400;
+        color: #555;
+        word-break: break-all;
+      }
+      .social-note a::after, .contact-card::after { content: none; }
+    }
+
+    @media (max-width: 780px) {
+      .shell { width: min(calc(100% - 24px), var(--shell)); }
+      .hero { border-radius: 0 0 28px 28px; }
+      .hero-top {
+        width: min(calc(100% - 28px), var(--hero-inner));
+        padding-top: max(14px, env(safe-area-inset-top));
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        width: min(calc(100% - 28px), var(--hero-inner));
+        min-height: auto;
+        padding: 30px 0 44px;
+        text-align: center;
+      }
+      .logo-frame { width: min(280px, 76vw); order: 0; }
+      .hero-copy { order: 1; }
+      .hero h1 { margin-inline: auto; font-size: clamp(2.1rem, 11vw, 3.25rem); }
+      .hero-intro { margin-inline: auto; }
+      .hero-actions { justify-content: center; }
+      .jumpbar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      main { padding-top: 42px; }
+      .section { margin-top: 52px; }
+      .section-head,
+      .about-grid,
+      .join-card { grid-template-columns: 1fr; }
+      .section-head { gap: 12px; }
+      .activity-grid { grid-template-columns: 1fr 1fr; }
+      .flow-strip { grid-template-columns: 1fr; }
+      .flow-step:not(:last-child)::after {
+        right: auto;
+        left: 28px;
+        top: auto;
+        bottom: -18px;
+        transform: none;
+      }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-card { min-height: 0; }
+      .join-actions { flex-direction: row; }
+    }
+
+    @media (max-width: 540px) {
+      .shell { width: min(calc(100% - 20px), var(--shell)); }
+      .hero-top { align-items: center; }
+      .place { font-size: .7rem; }
+      .lang-switch button { min-width: 38px; min-height: 32px; padding-inline: 10px; }
+      .theme-toggle { width: 38px; height: 38px; }
+      .hero-tools { gap: 6px; }
+      .hero-grid {
+        width: min(calc(100% - 24px), var(--hero-inner));
+        padding: 24px 0 38px;
+      }
+      .hero-intro { font-size: .98rem; }
+      .hero-actions { display: grid; grid-template-columns: 1fr; }
+      .cta { width: 100%; }
+      .jumpbar { gap: 4px; padding: 5px; }
+      .jumpbar a { padding: 9px 4px; font-size: .76rem; }
+      main { padding-top: 36px; }
+      .section { margin-top: 46px; }
+      .section-head { margin-bottom: 18px; }
+      .about-copy { padding: 24px 20px; }
+      .activity-grid { grid-template-columns: 1fr; }
+      .activity { padding: 21px 20px; }
+      .join-card { padding: 26px 20px; border-radius: 24px; }
+      .join-actions { flex-direction: column; }
+      .social-note { align-items: flex-start; flex-direction: column; gap: 8px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; gap: 6px; }
+    }
+
+    @keyframes arin-rise {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    html.anim-ready .logo-frame {
+      animation: arin-rise .75s cubic-bezier(.22,.61,.36,1) backwards;
+    }
+    html.anim-ready .hero-copy {
+      animation: arin-rise .75s .1s cubic-bezier(.22,.61,.36,1) backwards;
+    }
+
+    html.anim-ready [data-reveal]:not(.is-visible) {
+      opacity: 0;
+      transform: translateY(26px);
+    }
+    html.anim-ready [data-reveal].is-visible {
+      animation: arin-rise .7s cubic-bezier(.22,.61,.36,1) both;
+    }
+    html.anim-ready .activity-grid .activity:nth-child(2).is-visible { animation-delay: .07s; }
+    html.anim-ready .activity-grid .activity:nth-child(3).is-visible { animation-delay: .14s; }
+    html.anim-ready .activity-grid .activity:nth-child(4).is-visible { animation-delay: .21s; }
+    html.anim-ready .contact-grid .contact-card:nth-child(2).is-visible { animation-delay: .07s; }
+    html.anim-ready .contact-grid .contact-card:nth-child(3).is-visible { animation-delay: .14s; }
+
+    .cta:active { transform: translateY(0) scale(.98); }
+    .activity:active, .contact-card:active { transform: translateY(-1px) scale(.99); }
+    .jumpbar a.active { background: var(--forest); color: #fbf6ea; }
+    .social-note a { transition: transform .18s ease; }
+    .social-note a:hover { transform: translateX(3px); }
+    .logo-frame { transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease; }
+    @media (hover: hover) {
+      .logo-frame:hover {
+        border-color: rgba(255,255,255,.28);
+        box-shadow: 0 14px 36px rgba(0,0,0,.22), inset 0 1px rgba(255,255,255,.05);
+        transform: translateY(-4px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      html.anim-ready [data-reveal],
+      html.anim-ready .logo-frame,
+      html.anim-ready .hero-copy { opacity: 1 !important; transform: none !important; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Arîn Kültür Sanat Öğrenci Derneği",
+    "alternateName": "Arîn",
+    "description": "Arîn, öğrencilerin kültür, sanat, dayanışma ve ortak üretim etrafında bir araya geldiği bir buluşma alanı.",
+    "email": "arinogrencidernegi@gmail.com",
+    "logo": "logo-512.png",
+    "image": "logo-512.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "İskenderpaşa Mh. Uzunyusuf Sk. No:12",
+      "addressLocality": "Fatih",
+      "addressRegion": "İstanbul",
+      "addressCountry": "TR"
+    },
+    "sameAs": ["https://instagram.com/arinkultursanat"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Arîn'e katılmak için ne yapmalıyım?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ön koşul yok. E-posta ya da Instagram'dan bize yazman yeterli; sonraki buluşmalarda tanışırız."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Üyelik ücretli mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Arîn bir öğrenci derneğidir; güncel katılım koşullarını bize ulaşan herkesle açıkça paylaşıyoruz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Buluşmalar nerede yapılıyor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Buluşma ve etkinlik yerlerimizi duyurularımızda paylaşıyoruz; İstanbul Fatih'teki adresimizi iletişim bölümünde bulabilirsin."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kimler katılabilir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Öğrencileri özellikle bekliyoruz; kültür, sanat ve dayanışma çalışmalarımıza merak duyan herkesi buluşmalarda görmeye açığız."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-tr>İçeriğe geç</a>
+  <a class="skip-link" href="#main" data-ku>Biçe naverokê</a>
+
+  <div class="hero-wrap">
+    <header class="hero">
+      <div class="hero-top">
+        <span class="place">İstanbul · Fatih</span>
+        <div class="hero-tools">
+          <div class="lang-switch" role="group" aria-label="Dil / Ziman">
+            <button id="btn-tr" class="active" type="button" aria-pressed="true">TR</button>
+            <button id="btn-ku" type="button" aria-pressed="false">KU</button>
+          </div>
+          <button id="btn-theme" class="theme-toggle" type="button" aria-label="Tema">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4" stroke-linecap="round"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="logo-frame">
+          <img src="logo-crop.png" alt="Arîn Kültür Sanat Öğrenci Derneği" width="416" height="244" fetchpriority="high" decoding="async">
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow" data-tr>Kültür · Sanat · Öğrenci Dayanışması</p>
+          <p class="eyebrow" data-ku>Çand · Huner · Piştgiriya Xwendekaran</p>
+
+          <h1 data-tr>Birlikte öğrenen, üreten ve paylaşan öğrenciler.</h1>
+          <h1 data-ku>Xwendekarên ku bi hev re hîn dibin, diafirînin û parve dikin.</h1>
+
+          <p class="hero-intro" data-tr>
+            Arîn, öğrencilerin kültür, sanat, dayanışma ve ortak üretim etrafında bir araya geldiği bir buluşma alanı. Tanışmak, fikir paylaşmak ve birlikte üretmek için buradayız.
+          </p>
+          <p class="hero-intro" data-ku>
+            Arîn cihê hevdîtina xwendekaran e; em li dora çand, huner, piştgirî û afirandina hevpar têne cem hev. Ji bo nasîn, parvekirina ramanan û afirandina bi hev re em li vir in.
+          </p>
+
+          <div class="hero-actions">
+            <a class="cta primary" href="mailto:arinogrencidernegi@gmail.com?subject=Ar%C3%AEn%27e%20Kat%C4%B1l%C4%B1m">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
+              <span data-tr>Arîn'e Katıl</span><span data-ku>Tevlî Arînê Bibe</span>
+            </a>
+            <a class="cta secondary" href="https://instagram.com/arinkultursanat" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="jumpbar shell" aria-label="Sayfa bölümleri">
+      <a href="#about"><span data-tr>Biz Kimiz?</span><span data-ku>Em Kî Ne?</span></a>
+      <a href="#activities"><span data-tr>Neler Yapıyoruz?</span><span data-ku>Em Çi Dikin?</span></a>
+      <a href="#join"><span data-tr>Katılım</span><span data-ku>Tevlîbûn</span></a>
+      <a href="#faq"><span data-tr>SSS</span><span data-ku>Pirsên Giştî</span></a>
+      <a href="#contact"><span data-tr>İletişim</span><span data-ku>Têkilî</span></a>
+    </nav>
+  </div>
+
+  <main id="main" class="shell">
+    <section id="about" class="section" aria-labelledby="about-title-tr about-title-ku">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="section-kicker" data-tr>Arîn'i tanı</p>
+          <p class="section-kicker" data-ku>Arînê nas bike</p>
+          <h2 id="about-title-tr" data-tr>Biz Kimiz?</h2>
+          <h2 id="about-title-ku" data-ku>Em Kî Ne?</h2>
+        </div>
+        <p class="section-lead" data-tr>Farklı üniversite ve bölümlerden öğrencilerin yan yana geldiği, birbirinden öğrendiği ve birlikte ürettiği bir öğrenci alanıyız.</p>
+        <p class="section-lead" data-ku>Em qada xwendekaran in ku ji zanîngeh û beşên cuda têne cem hev, ji hev hîn dibin û bi hev re diafirînin.</p>
+      </div>
+
+      <div class="about-grid">
+        <article class="panel about-copy" data-reveal>
+          <p data-tr>
+            Üniversite yaşamını yalnızca derslerden ibaret görmüyoruz. Birlikte düşünmenin, kültür ve sanatla bağ kurmanın, birbirimizin deneyimlerinden öğrenmenin ve ortak işler üretmenin öğrencilik hayatını daha anlamlı kıldığına inanıyoruz.
+          </p>
+          <p data-tr>
+            Arîn'de mesele yalnızca bir etkinliğe katılmak değil; fikir getirmek, sorumluluk almak, tanışmak ve birlikte yeni bir şey kurabilmek.
+          </p>
+          <p data-ku>
+            Em jiyana zanîngehê tenê ji dersan pêkhatî nabînin. Em bawer dikin ku bi hev re fikirîn, bi çand û hunerê re têkilî danîn, ji serpêhatiyên hev hîn bûn û xebatên hevpar afirandin jiyana xwendekariyê watetir dike.
+          </p>
+          <p data-ku>
+            Li Arînê mesele tenê beşdarî çalakiyekê bûn nîne; raman anîn, berpirsiyarî girtin, hev nasîn û bi hev re tiştekî nû ava kirin e.
+          </p>
+        </article>
+
+        <aside class="panel values" aria-label="Arîn'in yaklaşımı" data-reveal>
+          <div class="value">
+            <span class="num">01</span>
+            <strong data-tr>Birlikte öğrenmek</strong><strong data-ku>Bi hev re hîn bûn</strong>
+            <span data-tr>Bilgiyi ve deneyimi paylaşmak.</span><span data-ku>Zanîn û serpêhatiyê parve kirin.</span>
+          </div>
+          <div class="value">
+            <span class="num">02</span>
+            <strong data-tr>Birlikte üretmek</strong><strong data-ku>Bi hev re afirandin</strong>
+            <span data-tr>Fikri ortak emeğe dönüştürmek.</span><span data-ku>Ramanê veguherandin kedeke hevpar.</span>
+          </div>
+          <div class="value">
+            <span class="num">03</span>
+            <strong data-tr>Yan yana durmak</strong><strong data-ku>Li kêleka hev bûn</strong>
+            <span data-tr>Öğrenci dayanışmasını büyütmek.</span><span data-ku>Piştgiriya xwendekaran xurt kirin.</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="activities" class="section" aria-labelledby="activities-title-tr activities-title-ku">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="section-kicker" data-tr>Ortak alanlarımız</p>
+          <p class="section-kicker" data-ku>Qadên me yên hevpar</p>
+          <h2 id="activities-title-tr" data-tr>Neler Yapıyoruz?</h2>
+          <h2 id="activities-title-ku" data-ku>Em Çi Dikin?</h2>
+        </div>
+        <p class="section-lead" data-tr>Çalışmalarımızı tek bir kalıba sıkıştırmıyoruz. Öğrencilerin fikir üretebildiği ve katkı sunabildiği açık bir alan kurmayı önemsiyoruz.</p>
+        <p class="section-lead" data-ku>Em xebatên xwe di qalibekî tenê de nahêlin. Ji bo ku xwendekar bikarin raman biafirînin û tevkariyê bikin, qada vekirî girîng dibînin.</p>
+      </div>
+
+      <div class="activity-grid">
+        <article class="activity" data-reveal>
+          <div class="activity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5a2.5 2.5 0 0 1 2.5 2.5v-16Z"/></svg></div>
+          <h3 data-tr>Kültür & Sanat</h3><h3 data-ku>Çand & Huner</h3>
+          <p data-tr>Okuma, gösterim, söyleşi, atölye ve ortak üretim gibi çalışmalar için alan açmayı önemsiyoruz.</p>
+          <p data-ku>Ji bo xwendin, nîşandan, sohbet, atolyê û afirandina hevpar qada vekirî ava kirin girîng dibînin.</p>
+        </article>
+
+        <article class="activity" data-reveal>
+          <div class="activity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM15.8 10a3 3 0 1 0 0-6"/><path d="M2.5 20c.4-4 2.4-6 6-6s5.6 2 6 6M14 14c4.3-.5 6.6 1.5 7 5" stroke-linecap="round"/></svg></div>
+          <h3 data-tr>Öğrenci Dayanışması</h3><h3 data-ku>Piştgiriya Xwendekaran</h3>
+          <p data-tr>Üniversite yaşamında birbirimizden öğrenmeyi, deneyim paylaşmayı ve yan yana durmayı önemsiyoruz.</p>
+          <p data-ku>Di jiyana zanîngehê de ji hev hîn bûn, serpêhatî parve kirin û li kêleka hev bûn ji bo me girîng e.</p>
+        </article>
+
+        <article class="activity" data-reveal>
+          <div class="activity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7.5h16v12H4z"/><path d="M7 4v7M17 4v7M8 14h3M13 14h3M8 17h3" stroke-linecap="round"/></svg></div>
+          <h3 data-tr>Buluşmalar & Etkinlikler</h3><h3 data-ku>Hevdîtin & Çalakî</h3>
+          <p data-tr>Öğrencilerin tanışabileceği, konuşabileceği ve birlikte zaman geçirebileceği buluşmalar için zemin oluşturuyoruz.</p>
+          <p data-ku>Ji bo hevdîtinên ku xwendekar bikarin hev nas bikin, biaxivin û bi hev re dem derbas bikin, zemîn diafirînin.</p>
+        </article>
+
+        <article class="activity" data-reveal>
+          <div class="activity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3a6.5 6.5 0 0 0-3.7 11.8c.8.6 1.2 1.4 1.2 2.2h5c0-.8.4-1.6 1.2-2.2A6.5 6.5 0 0 0 12 3Z"/><path d="M9.5 20h5M10 17h4" stroke-linecap="round"/></svg></div>
+          <h3 data-tr>Fikir & Ortak Üretim</h3><h3 data-ku>Raman & Afirandina Hevpar</h3>
+          <p data-tr>Yeni bir fikrin varsa konuşabilir, geliştirebilir ve onu birlikte somut bir çalışmaya dönüştürebiliriz.</p>
+          <p data-ku>Heke ramaneke te ya nû hebe, em dikarin biaxivin, pêş bixin û bi hev re veguherînin xebateke berbiçav.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="flow" class="section" aria-labelledby="flow-title-tr flow-title-ku">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="section-kicker" data-tr>Süreç</p>
+          <p class="section-kicker" data-ku>Marhela</p>
+          <h2 id="flow-title-tr" data-tr>Nasıl çalışırız?</h2>
+          <h2 id="flow-title-ku" data-ku>Em Çawa Dixebitin?</h2>
+        </div>
+        <p class="section-lead" data-tr>Bir fikirden ortak bir ürüne giden yol üç basit adımdan geçer.</p>
+        <p class="section-lead" data-ku>Rê ji riya vekirîkê ta beşekî hevpar bi sê gavên sadean derbas dibe.</p>
+      </div>
+
+      <div class="flow-strip">
+        <article class="flow-step" data-reveal>
+          <span class="num">01</span>
+          <h3 data-tr>Fikir getir</h3><h3 data-ku>Fimanê bîne</h3>
+          <p data-tr>Aklındaki fikri, merakı ya da soruyu bize getir; hazır olmak zorunda değilsin.</p>
+          <p data-ku>Raman, meraq an jî pirsê xwe bîne; amade be hewce nîne.</p>
+        </article>
+        <article class="flow-step" data-reveal>
+          <span class="num">02</span>
+          <h3 data-tr>Tanış</h3><h3 data-ku>Hev nas bike</h3>
+          <p data-tr>Buluşmalarda tanışır, birbirimizin ne yapmak istediğini dinleriz.</p>
+          <p data-ku>Di hevdîtinan de hev nas dikin û digirin ku her kes çi dixwaze bike.</p>
+        </article>
+        <article class="flow-step" data-reveal>
+          <span class="num">03</span>
+          <h3 data-tr>Birlikte üret</h3><h3 data-ku>Bi hev re afirandin</h3>
+          <p data-tr>Uygun bir çalışma bulur, birlikte planlar ve hayata geçiririz.</p>
+          <p data-ku>Hevpar dikin, bi hev re plan dikin û bi rehet tê xebatê veşînin.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="join" class="section" aria-labelledby="join-title-tr join-title-ku">
+      <div class="join-card" data-reveal>
+        <div>
+          <p class="section-kicker" data-tr>Kapımız açık</p>
+          <p class="section-kicker" data-ku>Deriyê me vekirî ye</p>
+          <h2 id="join-title-tr" data-tr>Arîn'e yalnızca bakma; gel, tanışalım.</h2>
+          <h2 id="join-title-ku" data-ku>Tenê li Arînê temaşe neke; were, em hev nas bikin.</h2>
+          <p class="join-copy" data-tr>Bir fikrin, merakın ya da katkı sunmak istediğin bir alan varsa bize yazabilirsin. Önceden bir şey biliyor olman ya da hazır bir proje ile gelmen gerekmiyor; tanışmak iyi bir başlangıç.</p>
+          <p class="join-copy" data-ku>Heke raman, meraq an jî qadeke ku tu dixwazî tevkariyê bikî hebe, dikarî ji me re binivîsî. Ne hewce ye ku tu ji berê tiştek bizanibî an bi projeyeke amade werî; hev nasîn destpêkeke baş e.</p>
+        </div>
+        <div class="join-actions">
+          <a class="cta primary" href="mailto:arinogrencidernegi@gmail.com?subject=Ar%C3%AEn%27e%20Kat%C4%B1l%C4%B1m">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m5 7 7 6 7-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-tr>Bize e-posta gönder</span><span data-ku>E-nameyê bişîne</span>
+          </a>
+          <a class="cta secondary" href="https://instagram.com/arinkultursanat" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
+            <span data-tr>Instagram'dan yaz</span><span data-ku>Ji Instagramê binivîse</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section" aria-labelledby="faq-title-tr faq-title-ku">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="section-kicker" data-tr>Merak edilenler</p>
+          <p class="section-kicker" data-ku>Merakên bikaranîyî</p>
+          <h2 id="faq-title-tr" data-tr>Sıkça Sorulanlar</h2>
+          <h2 id="faq-title-ku" data-ku>Pirsên Giştî</h2>
+        </div>
+        <p class="section-lead" data-tr>Katılımdan buluşmalara, en çok gelen sorulara kısa yanıtlar.</p>
+        <p class="section-lead" data-ku>Ji beşdarî ta hevdîtinan, pirsên pirra têynîve yên kurt bersivên me.</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" data-reveal>
+          <summary>
+            <span data-tr>Arîn'e katılmak için ne yapmalıyım?</span>
+            <span data-ku>Ji bo tevlîbûna Arînê çi divê bikim?</span>
+          </summary>
+          <p data-tr>Ön koşul yok. E-posta ya da Instagram'dan bize yazman yeterli; sonraki buluşmalarda tanışırız.</p>
+          <p data-ku>Pêşîntiya pêwîst tune. E-name an jî Instagramê bişîne; di hevdîtinên piştre de em hev nas dikin.</p>
+        </details>
+
+        <details class="faq-item" data-reveal>
+          <summary>
+            <span data-tr>Üyelik ücretli mi?</span>
+            <span data-ku>Bûyariya girîyan bi diravê ye?</span>
+          </summary>
+          <p data-tr>Arîn bir öğrenci derneğidir; güncel katılım koşullarını bize ulaşan herkesle açıkça paylaşıyoruz.</p>
+          <p data-ku>Arîn komeleyekê xwendekar e; girengiyên beşdarîya niha bi her kes re ku têkilî dayîne vekî parve dikin.</p>
+        </details>
+
+        <details class="faq-item" data-reveal>
+          <summary>
+            <span data-tr>Buluşmalar nerede yapılıyor?</span>
+            <span data-ku>Hevdîtin li ku dikevin?</span>
+          </summary>
+          <p data-tr>Buluşma ve etkinlik yerlerimizi duyurularımızda paylaşıyoruz; İstanbul Fatih'teki adresimizi iletişim bölümünde bulabilirsin.</p>
+          <p data-ku>Cihên hevdîtin û çalakiyan di daxuyanîyan de parve dikin; navnîşana me li Fatihê Stenbolê li beşê têkilîyan heye.</p>
+        </details>
+
+        <details class="faq-item" data-reveal>
+          <summary>
+            <span data-tr>Kimler katılabilir?</span>
+            <span data-ku>Kim bikare tevlî bibin?</span>
+          </summary>
+          <p data-tr>Öğrencileri özellikle bekliyoruz; kültür, sanat ve dayanışma çalışmalarımıza merak duyan herkesi buluşmalarda görmeye açığız.</p>
+          <p data-ku>Bi taybetî xwendekar li borî din; her kes ku bi çand, huner û xebatên piştgiriyê merakdar e di hevdîtinan de dixwazin bibînin.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-title-tr contact-title-ku">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="section-kicker" data-tr>Bize ulaş</p>
+          <p class="section-kicker" data-ku>Bigihîje me</p>
+          <h2 id="contact-title-tr" data-tr>İletişim & Adres</h2>
+          <h2 id="contact-title-ku" data-ku>Têkilî & Navnîşan</h2>
+        </div>
+        <p class="section-lead" data-tr>Bir sorunun varsa, tanışmak istiyorsan ya da adresimize gelmeden önce bize ulaşmak istiyorsan aşağıdaki kanalları kullanabilirsin.</p>
+        <p class="section-lead" data-ku>Heke pirseke te hebe, dixwazî me nas bikî an berî ku werî navnîşana me bixwazî têkilî daynî, dikarî rêyên jêrîn bikar bînî.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-card instagram" data-reveal href="https://instagram.com/arinkultursanat" target="_blank" rel="noopener noreferrer">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg></span>
+          <span><strong>Instagram</strong><small>@arinkultursanat</small></span>
+        </a>
+
+        <a class="contact-card" data-reveal href="mailto:arinogrencidernegi@gmail.com">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4.5 7 7.5 6 7.5-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span><strong data-tr>E-posta</strong><strong data-ku>E-name</strong><small>arinogrencidernegi@gmail.com</small></span>
+        </a>
+
+        <a class="contact-card" data-reveal href="https://www.google.com/maps/search/?api=1&query=%C4%B0skenderpa%C5%9Fa+Mh.+Uzunyusuf+Sk.+No%3A12+Fatih+%C4%B0stanbul" target="_blank" rel="noopener noreferrer">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+          <span><strong data-tr>Adres</strong><strong data-ku>Navnîşan</strong><small data-tr>İskenderpaşa Mh. Uzunyusuf Sk. No:12, Fatih / İstanbul</small><small data-ku>İskenderpaşa Mh. Uzunyusuf Sk. No:12, Fatih / Stenbol</small></span>
+        </a>
+      </div>
+
+      <div class="social-note" data-reveal>
+        <span data-tr>Güncel duyurular, buluşmalar ve paylaşımlar için Instagram hesabımızı takip edebilirsin.</span>
+        <span data-ku>Ji bo daxuyanî, hevdîtin û parvekirinên nû dikarî hesabê me yê Instagramê bişopînî.</span>
+        <a href="https://instagram.com/arinkultursanat" target="_blank" rel="noopener noreferrer">@arinkultursanat ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <div class="footer-inner">
+      <span><span class="footer-brand">Arîn</span> · © 2026</span>
+      <span data-tr>Birlikte öğren, üret, paylaş.</span>
+      <span data-ku>Bi hev re hîn bibe, biafirîne, parve bike.</span>
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const btr = document.getElementById('btn-tr');
+    const bku = document.getElementById('btn-ku');
+
+    function setLang(lang) {
+      const next = lang === 'ku' ? 'ku' : 'tr';
+      root.lang = next;
+      btr.classList.toggle('active', next === 'tr');
+      bku.classList.toggle('active', next === 'ku');
+      btr.setAttribute('aria-pressed', next === 'tr' ? 'true' : 'false');
+      bku.setAttribute('aria-pressed', next === 'ku' ? 'true' : 'false');
+      document.title = next === 'ku'
+        ? 'Arîn | Komeleya Xwendekaran a Çand û Hunerê'
+        : 'Arîn Kültür Sanat Öğrenci Derneği';
+      try { localStorage.setItem('arin-lang', next); } catch (_) {}
+    }
+
+    btr.addEventListener('click', () => setLang('tr'));
+    bku.addEventListener('click', () => setLang('ku'));
+
+    const btheme = document.getElementById('btn-theme');
+    btheme.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('arin-theme', next); } catch (_) {}
+    });
+
+    try {
+      const saved = localStorage.getItem('arin-lang');
+      if (saved === 'tr' || saved === 'ku') setLang(saved);
+    } catch (_) {}
+
+    if (root.classList.contains('anim-ready') && 'IntersectionObserver' in window) {
+      const revealEls = document.querySelectorAll('[data-reveal]');
+      const io = new IntersectionObserver(entries => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      revealEls.forEach(el => {
+        io.observe(el);
+        el.addEventListener('animationend', e => {
+          if (e.target !== el) return;
+          el.classList.remove('is-visible');
+          el.removeAttribute('data-reveal');
+        });
+      });
+    } else {
+      document.querySelectorAll('[data-reveal]').forEach(el => el.removeAttribute('data-reveal'));
+    }
+
+    const jumpLinks = Array.from(document.querySelectorAll('.jumpbar a'));
+    const faqItems = Array.from(document.querySelectorAll('.faq-item'));
+    window.addEventListener('beforeprint', () => faqItems.forEach(d => { d.dataset.wasOpen = d.open ? '1' : '0'; d.open = true; }));
+    window.addEventListener('afterprint', () => faqItems.forEach(d => { if (d.dataset.wasOpen === '0') d.open = false; delete d.dataset.wasOpen; }));    const spySections = jumpLinks
+      .map(a => document.querySelector(a.getAttribute('href')))
+      .filter(Boolean);
+    if ('IntersectionObserver' in window && spySections.length) {
+      const spy = new IntersectionObserver(entries => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          jumpLinks.forEach(a => {
+            const on = a.getAttribute('href') === '#' + entry.target.id;
+            a.classList.toggle('active', on);
+            if (on) a.setAttribute('aria-current', 'true');
+            else a.removeAttribute('aria-current');
+          });
+        }
+      }, { rootMargin: '-40% 0px -50% 0px' });
+      spySections.forEach(sec => spy.observe(sec));
+    }
+  </script>
+</body>
+</html>
