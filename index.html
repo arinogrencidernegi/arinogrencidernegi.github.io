@@ -794,10 +794,12 @@
       .flow-strip { grid-template-columns: 1fr; }
       .flow-step:not(:last-child)::after {
         right: auto;
-        left: 28px;
+        left: 50%;
         top: auto;
-        bottom: -18px;
-        transform: none;
+        bottom: -10px;
+        transform: translateX(-50%) rotate(90deg);
+        background: transparent;
+        padding: 0;
       }
       .contact-grid { grid-template-columns: 1fr; }
       .contact-card { min-height: 0; }
