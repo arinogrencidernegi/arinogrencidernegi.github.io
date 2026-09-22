@@ -129,9 +129,8 @@
     button, a { -webkit-tap-highlight-color: transparent; }
     ::selection { background: var(--clay-soft); color: var(--ink); }
 
-    [data-ku] { display: none !important; }
+    html:not([lang="ku"]) [data-ku] { display: none !important; }
     html[lang="ku"] [data-tr] { display: none !important; }
-    html[lang="ku"] [data-ku] { display: revert !important; }
 
     .skip-link {
       position: fixed;

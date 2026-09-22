@@ -112,6 +112,17 @@ test('language switch shows only the selected language', async () => {
     assert.equal(await evaluate(`document.documentElement.lang`), 'ku');
     assert.equal(await evaluate(visibleLanguageCount('tr')), 0);
     assert.equal(await evaluate(`document.getElementById('btn-ku').getAttribute('aria-pressed')`), 'true');
+
+    const layout = await evaluate(`(() => ({
+      strong: getComputedStyle(document.querySelector('.contact-card strong[data-ku]')).display,
+      small: getComputedStyle(document.querySelector('.contact-card small[data-ku]')).display,
+      valueTitle: getComputedStyle(document.querySelector('.value strong[data-ku]')).display,
+      valueSub: getComputedStyle(document.querySelector('.value span[data-ku]')).display,
+    }))()`);
+    assert.equal(layout.strong, 'block', `KU strong must stay block: ${JSON.stringify(layout)}`);
+    assert.equal(layout.small, 'block', `KU small must stay block: ${JSON.stringify(layout)}`);
+    assert.equal(layout.valueTitle, 'block');
+    assert.equal(layout.valueSub, 'block');
   });
 });
 
