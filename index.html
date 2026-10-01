@@ -19,6 +19,7 @@
   <meta name="twitter:title" content="Arîn Kültür Sanat Öğrenci Derneği">
   <meta name="twitter:description" content="Birlikte öğreniyor, üretiyor ve üniversite yaşamını şekillendiriyoruz!">
   <meta name="twitter:image" content="https://arinogrencidernegi.github.io/logo-512.png">
+  <link rel="canonical" href="https://arinogrencidernegi.github.io/">
   <link rel="icon" href="logo-512.png" type="image/png">
   <script>
     (function () {
@@ -395,7 +396,7 @@
       align-items: center;
       gap: 10px;
       margin: 0 0 8px;
-      color: var(--clay);
+      color: var(--clay-ink);
       font-size: .75rem;
       font-weight: 850;
       letter-spacing: .11em;
@@ -461,7 +462,7 @@
       position: absolute;
       left: 22px;
       top: 22px;
-      color: var(--clay);
+      color: var(--clay-ink);
       font-family: var(--font-display);
       font-size: 1.05rem;
       font-weight: 700;
@@ -610,7 +611,7 @@
     .flow-step .num {
       display: block;
       margin-bottom: 12px;
-      color: var(--clay);
+      color: var(--clay-ink);
       font-family: var(--font-display);
       font-size: 1.05rem;
       font-weight: 700;
@@ -664,7 +665,7 @@
       background: var(--forest);
       color: #fff;
     }
-    .contact-card.instagram .icon { background: var(--clay); }
+    .contact-card.instagram .icon { background: #b96f3d; }
     .contact-card svg { width: 20px; height: 20px; }
     .contact-card strong { display: block; margin-top: 1px; color: var(--heading); font-size: .95rem; }
     .contact-card small {
@@ -709,7 +710,7 @@
     .footer-brand { color: var(--heading); font-weight: 800; }
 
     :focus-visible {
-      outline: 3px solid rgba(185,111,61,.55);
+      outline: 3px solid var(--clay-ink);
       outline-offset: 3px;
     }
 
@@ -944,7 +945,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main" data-tr>İçeriğe geç</a>
-  <a class="skip-link" href="#main" data-ku>Biçe naverokê</a>
+  <a class="skip-link" href="#main" data-ku>Biçin naverokê</a>
 
   <div class="hero-wrap">
     <header class="hero">
@@ -955,7 +956,7 @@
             <button id="btn-tr" class="active" type="button" aria-pressed="true">TR</button>
             <button id="btn-ku" type="button" aria-pressed="false">KU</button>
           </div>
-          <button id="btn-theme" class="theme-toggle" type="button" aria-label="Tema">
+          <button id="btn-theme" class="theme-toggle" type="button" aria-label="Tema / Rengê rûpelê" aria-pressed="false">
             <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4" stroke-linecap="round"/></svg>
             <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" stroke-linejoin="round"/></svg>
           </button>
@@ -995,7 +996,7 @@
       </div>
     </header>
 
-    <nav class="jumpbar shell" aria-label="Sayfa bölümleri">
+    <nav class="jumpbar shell" aria-label="Sayfa bölümleri / Beşên rûpelê">
       <a href="#about"><span data-tr>Biz Kimiz?</span><span data-ku>Em Kî Ne?</span></a>
       <a href="#activities"><span data-tr>Neler Yapıyoruz?</span><span data-ku>Em Çi Dikin?</span></a>
       <a href="#join"><span data-tr>Katılım</span><span data-ku>Tevlîbûn</span></a>
@@ -1005,7 +1006,7 @@
   </div>
 
   <main id="main" class="shell">
-    <section id="about" class="section" aria-labelledby="about-title-tr about-title-ku">
+    <section id="about" class="section" aria-labelledby="about-title-tr">
       <div class="section-head" data-reveal>
         <div>
           <p class="section-kicker" data-tr>Arîn'i tanıyın</p>
@@ -1018,7 +1019,7 @@
       </div>
 
       <div class="about-grid">
-        <article class="panel about-copy" data-reveal>
+        <div class="panel about-copy" data-reveal>
           <p data-tr>
             Öğrencilerin ortak çalışmalarla hem birbirlerini hem de içinde yaşadıkları toplumu geliştirebileceğine inanıyoruz. Bu anlayışla bir araya gelerek derneğimizi kurduk.
           </p>
@@ -1031,9 +1032,9 @@
           <p data-ku>
             Li Arînê her xwendekar dikare ramanên xwe bibêje, berpirsiyariyê bigire û bibe beşek ji xebatên hevpar.
           </p>
-        </article>
+        </div>
 
-        <aside class="panel values" aria-label="Arîn'in yaklaşımı" data-reveal>
+        <aside class="panel values" aria-label="Arîn'in yaklaşımı / Nêzîkatiya Arînê" data-reveal>
           <div class="value">
             <span class="num">01</span>
             <strong data-tr>Birlikte öğrenmek</strong><strong data-ku>Bi hev re hînbûn</strong>
@@ -1053,7 +1054,7 @@
       </div>
     </section>
 
-    <section id="activities" class="section" aria-labelledby="activities-title-tr activities-title-ku">
+    <section id="activities" class="section" aria-labelledby="activities-title-tr">
       <div class="section-head" data-reveal>
         <div>
           <p class="section-kicker" data-tr>Çalışma alanlarımız</p>
@@ -1070,7 +1071,7 @@
           <div class="activity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v16h4.5a2.5 2.5 0 0 1 2.5 2.5v-16Z"/></svg></div>
           <h3 data-tr>Kültür ve Sanat</h3><h3 data-ku>Çand û Huner</h3>
           <p data-tr>Okuma, gösterim, söyleşi ve atölyeler düzenleyerek kültür ve sanat alanında ortak çalışmalar yapıyoruz.</p>
-          <p data-ku>Em xwendin, pêşandan, gotûbêj û atolyeyan li dar dixin û di qada çand û hunerê de xebatên hevpar dikin.</p>
+          <p data-ku>Em xwendin, pêşandan, gotûbêj û atolye li dar dixin û di qada çand û hunerê de xebatên hevpar dikin.</p>
         </article>
 
         <article class="activity" data-reveal>
@@ -1096,7 +1097,7 @@
       </div>
     </section>
 
-    <section id="flow" class="section" aria-labelledby="flow-title-tr flow-title-ku">
+    <section id="flow" class="section" aria-labelledby="flow-title-tr">
       <div class="section-head" data-reveal>
         <div>
           <p class="section-kicker" data-tr>Süreç</p>
@@ -1130,7 +1131,7 @@
       </div>
     </section>
 
-    <section id="join" class="section" aria-labelledby="join-title-tr join-title-ku">
+    <section id="join" class="section" aria-labelledby="join-title-tr">
       <div class="join-card" data-reveal>
         <div>
           <p class="section-kicker" data-tr>Hoş Geldiniz</p>
@@ -1153,7 +1154,7 @@
       </div>
     </section>
 
-    <section id="faq" class="section" aria-labelledby="faq-title-tr faq-title-ku">
+    <section id="faq" class="section" aria-labelledby="faq-title-tr">
       <div class="section-head" data-reveal>
         <div>
           <p class="section-kicker" data-tr>Merak edilenler</p>
@@ -1162,7 +1163,7 @@
           <h2 id="faq-title-ku" data-ku>Pirsên Giştî</h2>
         </div>
         <p class="section-lead" data-tr>Katılımdan buluşmalara, en çok gelen soruları kısaca yanıtlıyoruz.</p>
-        <p class="section-lead" data-ku>Ji tevlîbûnê heta hevdîtinan, em bersiva pirsên ku herî zêde tên pirsîn bi kurtî didin.</p>
+        <p class="section-lead" data-ku>Ji tevlîbûnê heta hevdîtinan, em bersivên pirsên ku herî zêde tên pirsîn bi kurtî didin.</p>
       </div>
 
       <div class="faq-list">
@@ -1204,7 +1205,7 @@
       </div>
     </section>
 
-    <section id="contact" class="section" aria-labelledby="contact-title-tr contact-title-ku">
+    <section id="contact" class="section" aria-labelledby="contact-title-tr">
       <div class="section-head" data-reveal>
         <div>
           <p class="section-kicker" data-tr>Bize ulaşın</p>
@@ -1264,6 +1265,9 @@
       document.title = next === 'ku'
         ? 'Arîn | Komeleya Xwendekaran a Çand û Hunerê'
         : 'Arîn Kültür Sanat Öğrenci Derneği';
+      document.querySelectorAll('section[aria-labelledby]').forEach(sec => {
+        sec.setAttribute('aria-labelledby', sec.id + '-title-' + next);
+      });
       try { localStorage.setItem('arin-lang', next); } catch (_) {}
     }
 
@@ -1274,8 +1278,10 @@
     btheme.addEventListener('click', () => {
       const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
+      btheme.setAttribute('aria-pressed', next === 'dark' ? 'true' : 'false');
       try { localStorage.setItem('arin-theme', next); } catch (_) {}
     });
+    btheme.setAttribute('aria-pressed', root.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
 
     try {
       const saved = localStorage.getItem('arin-lang');
