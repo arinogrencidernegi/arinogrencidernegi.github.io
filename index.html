@@ -192,29 +192,11 @@
     .hero-top {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       gap: 18px;
       width: min(calc(100% - 48px), var(--hero-inner));
       margin: 0 auto;
       padding: 22px 0 0;
-    }
-    .place {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: .8rem;
-      font-weight: 760;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.78);
-    }
-    .place::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #d29a71;
-      box-shadow: 0 0 0 4px rgba(210,154,113,.15);
     }
 
     .hero-tools {
@@ -744,7 +726,7 @@
         box-shadow: none;
       }
       .hero::before, .hero::after { display: none; }
-      .place, .eyebrow, .hero-intro { color: #444 !important; }
+      .eyebrow, .hero-intro { color: #444 !important; }
       .panel, .activity, .faq-item, .contact-card, .join-card {
         box-shadow: none;
         break-inside: avoid;
@@ -810,7 +792,6 @@
     @media (max-width: 540px) {
       .shell { width: min(calc(100% - 20px), var(--shell)); }
       .hero-top { align-items: center; }
-      .place { font-size: .7rem; }
       .lang-switch button { min-width: 38px; min-height: 32px; padding-inline: 10px; }
       .theme-toggle { width: 38px; height: 38px; }
       .hero-tools { gap: 6px; }
@@ -951,7 +932,6 @@
   <div class="hero-wrap">
     <header class="hero">
       <div class="hero-top">
-        <span class="place">İstanbul · Fatih</span>
         <div class="hero-tools">
           <div class="lang-switch" role="group" aria-label="Dil / Ziman">
             <button id="btn-tr" class="active" type="button" aria-pressed="true">TR</button>
@@ -1229,7 +1209,7 @@
           <span><strong data-tr>E-posta</strong><strong data-ku>E-name</strong><small>arinogrencidernegi@gmail.com</small></span>
         </a>
 
-        <a class="contact-card" data-reveal href="https://www.google.com/maps/search/?api=1&query=%C4%B0skenderpa%C5%9Fa+Mh.+Uzunyusuf+Sk.+No%3A12+Fatih+%C4%B0stanbul" target="_blank" rel="noopener noreferrer">
+        <a class="contact-card" data-reveal href="https://maps.app.goo.gl/FqijD1sNodjtjvit7" target="_blank" rel="noopener noreferrer">
           <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
           <span><strong data-tr>Adres</strong><strong data-ku>Navnîşan</strong><small data-tr>İskenderpaşa Mh. Uzunyusuf Sk. No:12, Fatih / İstanbul</small><small data-ku>İskenderpaşa Mh. Uzunyusuf Sk. No:12, Fatih / Stenbol</small></span>
         </a>
