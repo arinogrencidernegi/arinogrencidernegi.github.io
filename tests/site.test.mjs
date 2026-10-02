@@ -210,8 +210,8 @@ test('seo metadata and JSON-LD organization are present and valid', async () => 
       twitterCard: document.querySelector('meta[name="twitter:card"]')?.content,
       jsonLd: JSON.parse(document.querySelector('script[type="application/ld+json"]').textContent),
     }))()`);
-    assert.equal(meta.ogImage, 'https://arinogrencidernegi.github.io/logo-512.jpg');
-    assert.equal(await evaluate(`document.querySelector('meta[property="og:url"]')?.content`), 'https://arinogrencidernegi.github.io/');
+    assert.equal(meta.ogImage, 'https://arin.web.app/logo-512.jpg');
+    assert.equal(await evaluate(`document.querySelector('meta[property="og:url"]')?.content`), 'https://arin.web.app/');
     assert.equal(meta.twitterCard, 'summary_large_image');
     assert.equal(meta.jsonLd['@type'], 'NGO');
     assert.equal(meta.jsonLd.email, 'arinogrencidernegi@gmail.com');
