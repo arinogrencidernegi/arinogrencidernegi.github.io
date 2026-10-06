@@ -283,3 +283,16 @@ test('print media hides chrome and forces revealed content visible', async () =>
     assert.equal(await evaluate(`document.querySelectorAll('.faq-item[open]').length`), 0);
   });
 });
+
+test('hero logo keeps its aspect ratio on phones and desktop', async () => {
+  for (const width of [320, 390, 1440]) {
+    await withPage({ width, height: 900 }, async ({ evaluate }) => {
+      const r = await evaluate(`(() => {
+        const img = document.querySelector('.logo-frame img');
+        const b = img.getBoundingClientRect();
+        return { shown: b.width / b.height, natural: img.naturalWidth / img.naturalHeight };
+      })()`);
+      assert.ok(Math.abs(r.shown - r.natural) < 0.03, `${width}px logo distorted: ${JSON.stringify(r)}`);
+    });
+  }
+});
