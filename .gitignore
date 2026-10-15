@@ -6,6 +6,8 @@ Adsız_Resim.png
 ape-musa-*.png
 musa-anter-original.jpg
 musa-anter-photo-source.jpg
+# sosyal medya görselleri ve kaynakları (Instagram için, siteye değil)
+sosyal/
 # yönetim paneli — yalnızca bu bilgisayarda, yayınlanmaz
 admin.html
 # Firebase yükleme çıktısı
