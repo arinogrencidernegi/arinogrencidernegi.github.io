@@ -661,6 +661,21 @@
       line-height: 1.45;
     }
 
+    .map-frame {
+      overflow: hidden;
+      margin-top: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: var(--shadow-card);
+    }
+    .map-frame iframe {
+      display: block;
+      width: 100%;
+      height: 340px;
+      border: 0;
+    }
+
     .social-note {
       display: flex;
       align-items: center;
@@ -744,6 +759,7 @@
         word-break: break-all;
       }
       .social-note a::after, .contact-card::after { content: none; }
+      .map-frame { display: none; }
     }
 
     @media (max-width: 780px) {
@@ -787,6 +803,7 @@
       }
       .contact-grid { grid-template-columns: 1fr; }
       .contact-card { min-height: 0; }
+      .map-frame iframe { height: 260px; }
       .join-actions { flex-direction: row; }
     }
 
@@ -1214,6 +1231,10 @@
           <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
           <span><strong data-tr>Adres</strong><strong data-ku>Navnîşan</strong><small data-tr>İskenderpaşa Mh. Uzunyusuf Sk. No:12, Fatih / İstanbul</small><small data-ku>İskenderpaşa Mh. Uzunyusuf Sk. No:12, Fatih / Stenbol</small></span>
         </a>
+      </div>
+
+      <div class="map-frame" data-reveal>
+        <iframe src="https://maps.google.com/maps?q=AR%C3%8EN+K%C3%BClt%C3%BCr+ve+Sanat+%C3%96%C4%9Frenci+Derne%C4%9Fi&amp;ll=41.0112681,28.9514047&amp;z=16&amp;hl=tr&amp;output=embed" title="Arîn Kültür ve Sanat Öğrenci Derneği konumu / Cihê komeleyê" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
 
       <div class="social-note" data-reveal>
